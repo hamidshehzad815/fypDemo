@@ -23,7 +23,7 @@ export const sendWelcomeEmail = async (email, username) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Library Management System</title>
+        <title>Welcome to TaskFlow AI</title>
         <style>
             * {
                 margin: 0;
@@ -45,7 +45,7 @@ export const sendWelcomeEmail = async (email, username) => {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
                 color: white;
                 padding: 40px 20px;
                 text-align: center;
@@ -66,7 +66,7 @@ export const sendWelcomeEmail = async (email, username) => {
                 margin-bottom: 30px;
             }
             .welcome-message h2 {
-                color: #667eea;
+                color: #6366f1;
                 font-size: 24px;
                 margin-bottom: 15px;
             }
@@ -96,9 +96,8 @@ export const sendWelcomeEmail = async (email, username) => {
                 padding-left: 25px;
             }
             .feature-list li:before {
-                content: "✓";
-                color: #28a745;
-                font-weight: bold;
+                content: "🤖";
+                font-size: 16px;
                 position: absolute;
                 left: 0;
             }
@@ -110,7 +109,7 @@ export const sendWelcomeEmail = async (email, username) => {
                 width: 200px;
                 margin: 30px auto;
                 padding: 12px 24px;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
                 color: white;
                 text-decoration: none;
                 border-radius: 25px;
@@ -138,7 +137,7 @@ export const sendWelcomeEmail = async (email, username) => {
             .social-links a {
                 display: inline-block;
                 margin: 0 10px;
-                color: #667eea;
+                color: #6366f1;
                 text-decoration: none;
             }
             @media (max-width: 600px) {
@@ -157,44 +156,44 @@ export const sendWelcomeEmail = async (email, username) => {
     <body>
         <div class="container">
             <div class="header">
-                <h1>📚 Library Management System</h1>
-                <p>Your gateway to knowledge and learning</p>
+                <h1>🤖 TaskFlow AI</h1>
+                <p>Intelligent Workflow Automation for Students</p>
             </div>
             
             <div class="content">
                 <div class="welcome-message">
-                    <h2>Welcome aboard, ${username}! 🎉</h2>
-                    <p>We're thrilled to have you join our library community. Your account has been successfully created and you're now ready to explore thousands of books, resources, and digital content.</p>
+                    <h2>Welcome to the future, ${username}! 🚀</h2>
+                    <p>You've just joined TaskFlow AI - the revolutionary platform that transforms your natural conversations into intelligent workflows. No more manual task creation or complex scheduling. Just speak naturally, and let AI do the rest.</p>
                 </div>
 
                 <div class="features">
-                    <h3>What you can do now:</h3>
+                    <h3>What makes TaskFlow AI special:</h3>
                     <ul class="feature-list">
-                        <li>Browse our extensive collection of books and digital resources</li>
-                        <li>Reserve books and get notified when they're available</li>
-                        <li>Track your reading history and set reading goals</li>
-                        <li>Access digital books and audiobooks 24/7</li>
-                        <li>Get personalized book recommendations</li>
-                        <li>Participate in library events and book clubs</li>
-                        <li>Manage your account and preferences</li>
+                        <li>Convert natural speech to structured workflows automatically</li>
+                        <li>AI-powered task dependency identification and optimization</li>
+                        <li>Smart scheduling across academics, health, work, and social life</li>
+                        <li>Intelligent workflow suggestions based on your patterns</li>
+                        <li>Automatic conflict detection and resolution</li>
+                        <li>Real-time workflow adjustments and recommendations</li>
+                        <li>Seamless integration with your university schedule</li>
                     </ul>
                 </div>
 
-                <a href="http://localhost:3000" class="cta-button">Start Exploring</a>
+                <a href="http://localhost:3000" class="cta-button">Start Your AI Journey</a>
 
                 <div style="text-align: center; margin-top: 30px;">
                     <p style="color: #666; font-size: 14px;">
-                        <strong>Need help?</strong><br>
-                        Our library staff is here to assist you. Contact us at 
-                        <a href="mailto:support@library.com" style="color: #667eea;">support@library.com</a>
-                        or visit our help center.
+                        <strong>Ready to experience the magic?</strong><br>
+                        Simply start talking to TaskFlow AI about your day, and watch as it creates 
+                        intelligent workflows tailored to your student life. Need help getting started? 
+                        Contact us at <a href="mailto:support@taskflowai.com" style="color: #6366f1;">support@taskflowai.com</a>
                     </p>
                 </div>
             </div>
 
             <div class="footer">
-                <p><strong>Happy Reading!</strong></p>
-                <p>The Library Management Team</p>
+                <p><strong>Welcome to Intelligent Productivity!</strong></p>
+                <p>The TaskFlow AI Team</p>
                 <div class="social-links">
                     <a href="#">📧 Email</a>
                     <a href="#">🌐 Website</a>
@@ -209,9 +208,10 @@ export const sendWelcomeEmail = async (email, username) => {
     </html>`;
 
     const mailOptions = {
-      from: `"Library Management System" <${process.env.EMAIL_USER}>`,
+      from: `"TaskFlow AI" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "🎉 Welcome to Library Management System!",
+      subject:
+        "🤖 Welcome to TaskFlow AI - Your Intelligent Workflow Assistant!",
       html: welcomeHtml,
     };
 
@@ -234,7 +234,7 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reset Your Password</title>
+        <title>Reset Your TaskFlow AI Password</title>
         <style>
             * {
                 margin: 0;
@@ -256,7 +256,7 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+                background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
                 color: white;
                 padding: 40px 20px;
                 text-align: center;
@@ -331,29 +331,15 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
                 color: #6c757d;
                 margin-top: 10px;
             }
-            .cta-button {
-                display: inline-block;
-                padding: 12px 30px;
-                background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-                color: white;
-                text-decoration: none;
-                border-radius: 25px;
-                font-weight: bold;
-                margin: 20px 0;
-                transition: transform 0.3s ease;
-            }
-            .cta-button:hover {
-                transform: translateY(-2px);
-            }
             .security-notice {
                 background-color: #f8f9fa;
-                border-left: 4px solid #ff6b6b;
+                border-left: 4px solid #ef4444;
                 padding: 20px;
                 margin: 30px 0;
                 border-radius: 0 8px 8px 0;
             }
             .security-notice h4 {
-                color: #ff6b6b;
+                color: #ef4444;
                 margin-bottom: 10px;
             }
             .security-notice ul {
@@ -406,19 +392,19 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
         <div class="container">
             <div class="header">
                 <h1>🔐 Password Reset Request</h1>
-                <p>Library Management System</p>
+                <p>TaskFlow AI Security</p>
             </div>
             
             <div class="content">
                 <div class="alert-box">
-                    <div class="icon">⚠️</div>
-                    <h2>Password Reset Requested</h2>
-                    <p>Someone has requested a password reset for your account</p>
+                    <div class="icon">🛡️</div>
+                    <h2>Secure Password Reset</h2>
+                    <p>Someone has requested a password reset for your TaskFlow AI account</p>
                 </div>
 
                 <div class="reset-section">
                     <h3>Your Password Reset Token</h3>
-                    <p>Use the token below to reset your password. Copy this token and paste it in the CLI application when prompted.</p>
+                    <p>Use the token below to reset your TaskFlow AI password. Copy this token and paste it in the application when prompted.</p>
                     
                     <div class="token-box">
                         <div class="token">${resetToken}</div>
@@ -431,30 +417,31 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
                 </div>
 
                 <div class="security-notice">
-                    <h4>🛡️ Security Guidelines</h4>
+                    <h4>🔒 Security Guidelines</h4>
                     <ul>
                         <li>Never share this token with anyone</li>
-                        <li>Use this token only in the official CLI application</li>
+                        <li>Use this token only in the official TaskFlow AI application</li>
                         <li>If you didn't request this reset, please contact support immediately</li>
                         <li>This token can only be used once</li>
-                        <li>Make sure to create a strong new password</li>
+                        <li>Choose a strong password to protect your workflows and AI data</li>
+                        <li>Consider enabling two-factor authentication after reset</li>
                     </ul>
                 </div>
 
                 <div style="text-align: center; margin-top: 30px;">
                     <p style="color: #666;">
                         <strong>Need help?</strong><br>
-                        Contact our support team at 
-                        <a href="mailto:support@library.com" style="color: #ff6b6b;">support@library.com</a>
+                        Contact our TaskFlow AI support team at 
+                        <a href="mailto:security@taskflowai.com" style="color: #ef4444;">security@taskflowai.com</a>
                     </p>
                 </div>
             </div>
 
             <div class="footer">
-                <p><strong>Library Management System</strong></p>
+                <p><strong>TaskFlow AI Security Team</strong></p>
                 <p>This email was sent to ${email}</p>
                 <p style="margin-top: 15px; font-size: 12px; color: #999;">
-                    If you didn't request a password reset, please ignore this email or contact support if you have concerns.
+                    If you didn't request a password reset, please ignore this email or contact support if you have concerns about your account security.
                 </p>
             </div>
         </div>
@@ -462,9 +449,9 @@ export const sendResetPasswordEmail = async (email, resetToken) => {
     </html>`;
 
     const mailOptions = {
-      from: `"Library Management System Security" <${process.env.EMAIL_USER}>`,
+      from: `"TaskFlow AI Security" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "🔐 Password Reset Token - Action Required",
+      subject: "🔐 TaskFlow AI Password Reset Token - Action Required",
       html: resetHtml,
     };
 
@@ -487,7 +474,7 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Verify Your Email Address</title>
+        <title>Verify Your TaskFlow AI Email</title>
         <style>
             * {
                 margin: 0;
@@ -509,7 +496,7 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
                 color: white;
                 padding: 40px 20px;
                 text-align: center;
@@ -526,8 +513,8 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 padding: 40px 30px;
             }
             .verification-box {
-                background-color: #d1ecf1;
-                border: 1px solid #bee5eb;
+                background-color: #d1fae5;
+                border: 1px solid #a7f3d0;
                 border-radius: 8px;
                 padding: 20px;
                 margin-bottom: 30px;
@@ -538,11 +525,11 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 margin-bottom: 15px;
             }
             .verification-box h2 {
-                color: #0c5460;
+                color: #065f46;
                 margin-bottom: 10px;
             }
             .verification-box p {
-                color: #0c5460;
+                color: #065f46;
                 font-size: 14px;
             }
             .verification-section {
@@ -559,8 +546,8 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 line-height: 1.8;
             }
             .token-box {
-                background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
-                border: 2px dashed #28a745;
+                background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+                border: 2px dashed #10b981;
                 border-radius: 8px;
                 padding: 20px;
                 margin: 25px 0;
@@ -570,33 +557,19 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 font-family: 'Courier New', monospace;
                 font-size: 24px;
                 font-weight: bold;
-                color: #155724;
+                color: #065f46;
                 letter-spacing: 2px;
                 word-break: break-all;
                 background-color: #fff;
                 padding: 15px;
                 border-radius: 5px;
-                border: 1px solid #c3e6cb;
+                border: 1px solid #a7f3d0;
                 margin: 10px 0;
             }
             .copy-instruction {
                 font-size: 12px;
-                color: #155724;
+                color: #065f46;
                 margin-top: 10px;
-            }
-            .cta-button {
-                display: inline-block;
-                padding: 12px 30px;
-                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-                color: white;
-                text-decoration: none;
-                border-radius: 25px;
-                font-weight: bold;
-                margin: 20px 0;
-                transition: transform 0.3s ease;
-            }
-            .cta-button:hover {
-                transform: translateY(-2px);
             }
             .verification-steps {
                 background-color: #f8f9fa;
@@ -605,7 +578,7 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 margin: 30px 0;
             }
             .verification-steps h4 {
-                color: #28a745;
+                color: #10b981;
                 margin-bottom: 15px;
                 text-align: center;
             }
@@ -624,7 +597,7 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 position: absolute;
                 left: 0;
                 top: 10px;
-                background: #28a745;
+                background: #10b981;
                 color: white;
                 width: 25px;
                 height: 25px;
@@ -648,13 +621,13 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
             }
             .benefits-box {
                 background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-                border-left: 4px solid #28a745;
+                border-left: 4px solid #10b981;
                 padding: 20px;
                 margin: 30px 0;
                 border-radius: 0 8px 8px 0;
             }
             .benefits-box h4 {
-                color: #28a745;
+                color: #10b981;
                 margin-bottom: 15px;
             }
             .benefits-list {
@@ -667,9 +640,8 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 padding-left: 25px;
             }
             .benefits-list li:before {
-                content: "✓";
-                color: #28a745;
-                font-weight: bold;
+                content: "🤖";
+                font-size: 16px;
                 position: absolute;
                 left: 0;
             }
@@ -705,19 +677,19 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
         <div class="container">
             <div class="header">
                 <h1>📧 Verify Your Email</h1>
-                <p>Library Management System</p>
+                <p>TaskFlow AI Account Activation</p>
             </div>
             
             <div class="content">
                 <div class="verification-box">
-                    <div class="icon">✉️</div>
-                    <h2>Email Verification Required</h2>
-                    <p>Please verify your email address to activate your account</p>
+                    <div class="icon">🚀</div>
+                    <h2>Activate Your AI Assistant</h2>
+                    <p>Verify your email to unlock the full power of TaskFlow AI</p>
                 </div>
 
                 <div class="verification-section">
                     <h3>Your Email Verification Token</h3>
-                    <p>Use the token below to verify your email address. Copy this token and paste it in the CLI application when prompted.</p>
+                    <p>Use the token below to verify your email address and activate your TaskFlow AI account. Copy this token and paste it in the application when prompted.</p>
                     
                     <div class="token-box">
                         <div class="token">${verificationToken}</div>
@@ -730,42 +702,43 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
                 </div>
 
                 <div class="verification-steps">
-                    <h4>📋 How to Verify Your Email</h4>
+                    <h4>🎯 How to Verify Your Email</h4>
                     <ol class="steps-list">
                         <li>Copy the verification token above</li>
-                        <li>Open the Library Management CLI application</li>
+                        <li>Open the TaskFlow AI application</li>
                         <li>Select "Verify Email" from the menu</li>
                         <li>Paste the token when prompted</li>
-                        <li>Your email will be verified instantly!</li>
+                        <li>Start creating intelligent workflows!</li>
                     </ol>
                 </div>
 
                 <div class="benefits-box">
-                    <h4>🎯 Benefits of Email Verification</h4>
+                    <h4>🤖 What Awaits You After Verification</h4>
                     <ul class="benefits-list">
-                        <li>Secure your account with verified contact information</li>
-                        <li>Receive important notifications about your library activities</li>
-                        <li>Get instant alerts for book availability and due dates</li>
-                        <li>Access password reset and account recovery features</li>
-                        <li>Receive personalized book recommendations via email</li>
-                        <li>Stay updated with library events and announcements</li>
+                        <li>AI-powered workflow creation from natural language</li>
+                        <li>Intelligent task dependency analysis and optimization</li>
+                        <li>Smart scheduling across all life domains</li>
+                        <li>Personalized productivity insights and recommendations</li>
+                        <li>Automatic conflict detection and resolution</li>
+                        <li>Real-time workflow adjustments based on your patterns</li>
+                        <li>Seamless integration with your academic schedule</li>
                     </ul>
                 </div>
 
                 <div style="text-align: center; margin-top: 30px;">
                     <p style="color: #666;">
-                        <strong>Need help?</strong><br>
-                        Contact our support team at 
-                        <a href="mailto:support@library.com" style="color: #28a745;">support@library.com</a>
+                        <strong>Ready to transform your productivity?</strong><br>
+                        Contact our TaskFlow AI team at 
+                        <a href="mailto:support@taskflowai.com" style="color: #10b981;">support@taskflowai.com</a>
                     </p>
                 </div>
             </div>
 
             <div class="footer">
-                <p><strong>Library Management System</strong></p>
+                <p><strong>TaskFlow AI Team</strong></p>
                 <p>This verification email was sent to ${email}</p>
                 <p style="margin-top: 15px; font-size: 12px; color: #999;">
-                    If you didn't create an account, please ignore this email or contact support if you have concerns.
+                    If you didn't create a TaskFlow AI account, please ignore this email or contact support if you have concerns.
                 </p>
             </div>
         </div>
@@ -773,9 +746,9 @@ export const sendEmailVerificationToken = async (email, verificationToken) => {
     </html>`;
 
     const mailOptions = {
-      from: `"Library Management System" <${process.env.EMAIL_USER}>`,
+      from: `"TaskFlow AI" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "📧 Verify Your Email Address - Library Management System",
+      subject: "🚀 Activate Your TaskFlow AI Account - Verification Required",
       html: verificationHtml,
     };
 
