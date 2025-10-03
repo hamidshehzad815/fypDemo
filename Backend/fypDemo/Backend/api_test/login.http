@@ -1,7 +1,0 @@
-POST http://192.168.100.11:3400/users/login
-Content-Type: application/json
-
-{
-  "email": "sanashahzad2201@gmail.com",
-  "password": "SanaShahzad@2818"
-}
