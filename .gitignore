@@ -1,4 +1,4 @@
-# Flutter
+echo "# Flutter
 frontend/build/
 frontend/.dart_tool/
 frontend/.idea/
@@ -6,4 +6,4 @@ frontend/.vscode/
 
 # Node.js
 backend/node_modules/
-backend/.env
+backend/.env" > .gitignore
