@@ -1,0 +1,12 @@
+POST http://localhost:3400/users/signup
+Content-Type: application/json
+
+{
+  "firstName": "Areej",
+  "lastName": "Fatima",
+  "dateOfBirth": "2012-7-28",
+  "email": "f2022266861@umt.edu.pk",
+  "phone": "+92001234567",
+  "address": "123 Kahna St, alitown, pakistan",
+  "password": "Areej@8900"
+}
